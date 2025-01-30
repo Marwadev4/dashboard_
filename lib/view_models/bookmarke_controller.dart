@@ -29,14 +29,14 @@ class BookmarkController extends GetxController {
       'price': '24',
       'rating': '4.8',
       'reviews': 829,
-      'image': 'assets/images/house_cleaning.PNG',
+      'image': 'assets/images/house_cleaning.png',
       'description':
           'A thorough and efficient cleaning service tailored to your home’s specific needs, ensuring a spotless and comfortable living environment.',
       'category': 'Cleaning',
       'gallery': [
-        'assets/images/services/cleaning_1.PNG',
-        'assets/images/services/cleaning_2.PNG',
-        'assets/images/services/cleaning_3.PNG',
+        'assets/images/services/cleaning_1.png',
+        'assets/images/services/cleaning_2.png',
+        'assets/images/services/cleaning_3.png',
       ],
       'userReviews': [
         {
@@ -64,7 +64,7 @@ class BookmarkController extends GetxController {
       'price': '30',
       'rating': '4.7',
       'reviews': 829,
-      'image': 'assets/images/house_cleaning.PNG',
+      'image': 'assets/images/house_cleaning.png',
       'description':
           'Professional office cleaning to maintain a tidy, hygienic, and productive workspace. We clean your office to the highest standards.',
       'category': 'Cleaning',
@@ -81,9 +81,9 @@ class BookmarkController extends GetxController {
         },
       ],
       'gallery': [
-        'assets/images/services/cleaning_1.PNG',
-        'assets/images/services/cleaning_2.PNG',
-        'assets/images/services/cleaning_3.PNG'
+        'assets/images/services/cleaning_1.png',
+        'assets/images/services/cleaning_2.png',
+        'assets/images/services/cleaning_3.png'
       ],
       'ratingBreakdown': {
         '5-stars': 500,
@@ -99,14 +99,14 @@ class BookmarkController extends GetxController {
       'price': '18',
       'rating': '4.5',
       'reviews': 829,
-      'image': 'assets/images/house_cleaning.PNG',
+      'image': 'assets/images/house_cleaning.png',
       'description':
           'Expert window cleaning that enhances your view and brightens your space. We clean both the interior and exterior for streak-free results.',
       'category': 'Cleaning',
       'gallery': [
-        'assets/images/services/cleaning_1.PNG',
-        'assets/images/services/cleaning_2.PNG',
-        'assets/images/services/cleaning_3.PNG'
+        'assets/images/services/cleaning_1.png',
+        'assets/images/services/cleaning_2.png',
+        'assets/images/services/cleaning_3.png'
       ],
       'userReviews': [
         {
@@ -141,12 +141,12 @@ class BookmarkController extends GetxController {
           'Get your vehicle back in top condition with our car repair services, handling everything from engine issues to minor repairs.',
       'category': 'Repairing',
       'gallery': [
-        'assets/images/services/Repairing_1.PNG',
-        'assets/images/services/Repairing_2.PNG',
-        'assets/images/services/Repairing_3.PNG',
-        'assets/images/services/Repairing_4.PNG',
-        'assets/images/services/Repairing_5.PNG',
-        'assets/images/services/Repairing_6.PNG',
+        'assets/images/services/Repairing_1.png',
+        'assets/images/services/Repairing_2.png',
+        'assets/images/services/Repairing_3.png',
+        'assets/images/services/Repairing_4.png',
+        'assets/images/services/Repairing_5.png',
+        'assets/images/services/Repairing_6.png',
       ],
       'userReviews': [
         {
@@ -179,12 +179,12 @@ class BookmarkController extends GetxController {
           'Skilled technicians to repair a variety of machines, ensuring their efficient and long-lasting performance.',
       'category': 'Repairing',
       'gallery': [
-        'assets/images/services/Repairing_1.PNG',
-        'assets/images/services/Repairing_2.PNG',
-        'assets/images/services/Repairing_3.PNG',
-        'assets/images/services/Repairing_4.PNG',
-        'assets/images/services/Repairing_5.PNG',
-        'assets/images/services/Repairing_6.PNG',
+        'assets/images/services/Repairing_1.png',
+        'assets/images/services/Repairing_2.png',
+        'assets/images/services/Repairing_3.png',
+        'assets/images/services/Repairing_4.png',
+        'assets/images/services/Repairing_5.png',
+        'assets/images/services/Repairing_6.png',
       ],
       'userReviews': [
         {
@@ -219,12 +219,12 @@ class BookmarkController extends GetxController {
           'Bring color and life to your home with our professional painting services, ensuring smooth, even coats that last.',
       'category': 'Painting',
       'gallery': [
-        'assets/images/services/Painting_1.PNG',
-        'assets/images/services/painting_2.PNG',
-        'assets/images/services/painting_3.PNG',
-        'assets/images/services/painting_4.PNG',
-        'assets/images/services/painting_5.PNG',
-        'assets/images/services/painting_6.PNG',
+        'assets/images/services/Painting_1.png',
+        'assets/images/services/painting_2.png',
+        'assets/images/services/painting_3.png',
+        'assets/images/services/painting_4.png',
+        'assets/images/services/painting_5.png',
+        'assets/images/services/painting_6.png',
       ],
       'userReviews': [
         {
@@ -250,12 +250,12 @@ class BookmarkController extends GetxController {
           'Brighten your office environment with our painting services, offering modern designs and smooth finishes that promote productivity.',
       'category': 'Painting',
       'gallery': [
-        'assets/images/services/Painting_1.PNG',
-        'assets/images/services/painting_2.PNG',
-        'assets/images/services/painting_3.PNG',
-        'assets/images/services/painting_4.PNG',
-        'assets/images/services/painting_5.PNG',
-        'assets/images/services/painting_6.PNG',
+        'assets/images/services/Painting_1.png',
+        'assets/images/services/painting_2.png',
+        'assets/images/services/painting_3.png',
+        'assets/images/services/painting_4.png',
+        'assets/images/services/painting_5.png',
+        'assets/images/services/painting_6.png',
       ],
     },
 
@@ -271,12 +271,12 @@ class BookmarkController extends GetxController {
           'Our laundry service ensures your clothes are clean, fresh, and perfectly folded. We offer fast and convenient pick-up and delivery.',
       'category': 'Laundry',
       'gallery': [
-        'assets/images/services/Laundry_1.PNG',
-        'assets/images/services/Laundry_2.PNG',
-        'assets/images/services/Laundry_3.PNG',
-        'assets/images/services/Laundry_4.PNG',
-        'assets/images/services/Laundry_5.PNG',
-        'assets/images/services/Laundry_6.PNG',
+        'assets/images/services/Laundry_1.png',
+        'assets/images/services/Laundry_2.png',
+        'assets/images/services/Laundry_3.png',
+        'assets/images/services/Laundry_4.png',
+        'assets/images/services/Laundry_5.png',
+        'assets/images/services/Laundry_6.png',
       ],
     },
     {
@@ -290,12 +290,12 @@ class BookmarkController extends GetxController {
           'Specialized laundry service for men’s clothing, ensuring every item is treated with care and precision for a fresh, crisp finish.',
       'category': 'Laundry',
       'gallery': [
-        'assets/images/services/Laundry_1.PNG',
-        'assets/images/services/Laundry_2.PNG',
-        'assets/images/services/Laundry_3.PNG',
-        'assets/images/services/Laundry_4.PNG',
-        'assets/images/services/Laundry_5.PNG',
-        'assets/images/services/Laundry_6.PNG',
+        'assets/images/services/Laundry_1.png',
+        'assets/images/services/Laundry_2.png',
+        'assets/images/services/Laundry_3.png',
+        'assets/images/services/Laundry_4.png',
+        'assets/images/services/Laundry_5.png',
+        'assets/images/services/Laundry_6.png',
       ],
     },
 
@@ -311,10 +311,10 @@ class BookmarkController extends GetxController {
           'We fix a wide range of household appliances to restore their optimal function, whether it’s a refrigerator, washing machine, or air conditioner.',
       'category': 'Appliance',
       'gallery': [
-        'assets/images/services/Appliance_2.PNG',
-        'assets/images/services/Appliance_3.PNG',
-        'assets/images/services/Appliance_4.PNG',
-        'assets/images/services/Appliance.PNG',
+        'assets/images/services/Appliance_2.png',
+        'assets/images/services/Appliance_3.png',
+        'assets/images/services/Appliance_4.png',
+        'assets/images/services/Appliance.png',
       ],
     },
     {
@@ -328,10 +328,10 @@ class BookmarkController extends GetxController {
           'Professional installation of home appliances with guaranteed safety and correct setup, ensuring your appliances work seamlessly from day one.',
       'category': 'Appliance',
       'gallery': [
-        'assets/images/services/Appliance_2.PNG',
-        'assets/images/services/Appliance_3.PNG',
-        'assets/images/services/Appliance_4.PNG',
-        'assets/images/services/Appliance.PNG',
+        'assets/images/services/Appliance_2.png',
+        'assets/images/services/Appliance_3.png',
+        'assets/images/services/Appliance_4.png',
+        'assets/images/services/Appliance.png',
       ],
     },
 
@@ -347,12 +347,12 @@ class BookmarkController extends GetxController {
           'Expert plumbing services for repairs, including fixing leaks, unclogging drains, and handling pipe issues to prevent damage and ensure smooth water flow.',
       'category': 'Plumbing',
       'gallery': [
-        'assets/images/services/Painting_1.PNG',
-        'assets/images/services/Painting_2.PNG',
-        'assets/images/services/Painting_3.PNG',
-        'assets/images/services/Painting_4.PNG',
-        'assets/images/services/painting_5.PNG',
-        'assets/images/services/painting_6.PNG',
+        'assets/images/services/Painting_1.png',
+        'assets/images/services/Painting_2.png',
+        'assets/images/services/Painting_3.png',
+        'assets/images/services/Painting_4.png',
+        'assets/images/services/painting_5.png',
+        'assets/images/services/painting_6.png',
       ],
     },
     {
@@ -366,12 +366,12 @@ class BookmarkController extends GetxController {
           'Comprehensive plumbing services to meet all your needs, from installation to maintenance, to keep your plumbing system in excellent condition.',
       'category': 'Plumbing',
       'gallery': [
-        'assets/images/services/Painting_1.PNG',
-        'assets/images/services/Painting_2.PNG',
-        'assets/images/services/Painting_3.PNG',
-        'assets/images/services/Painting_4.PNG',
-        'assets/images/services/painting_5.PNG',
-        'assets/images/services/painting_6.PNG',
+        'assets/images/services/Painting_1.png',
+        'assets/images/services/Painting_2.png',
+        'assets/images/services/Painting_3.png',
+        'assets/images/services/Painting_4.png',
+        'assets/images/services/painting_5.png',
+        'assets/images/services/painting_6.png',
       ],
     },
 
@@ -387,11 +387,11 @@ class BookmarkController extends GetxController {
           'Reliable and safe home shifting service with careful handling of your belongings. We ensure a smooth transition to your new home.',
       'category': 'Shifting',
       'gallery': [
-        'assets/images/services/Shifting_1.PNG',
-        'assets/images/services/Shifting_2.PNG',
-        'assets/images/services/Shifting_3.PNG',
-        'assets/images/services/Shifting_4.PNG',
-        'assets/images/services/Shifting_5.PNG',
+        'assets/images/services/Shifting_1.png',
+        'assets/images/services/Shifting_2.png',
+        'assets/images/services/Shifting_3.png',
+        'assets/images/services/Shifting_4.png',
+        'assets/images/services/Shifting_5.png',
       ],
     },
     {
@@ -405,11 +405,11 @@ class BookmarkController extends GetxController {
           'Professional office shifting services to relocate your business without any downtime. We handle all your office furniture and equipment with care.',
       'category': 'Shifting',
       'gallery': [
-        'assets/images/services/Shifting_1.PNG',
-        'assets/images/services/Shifting_2.PNG',
-        'assets/images/services/Shifting_3.PNG',
-        'assets/images/services/Shifting_4.PNG',
-        'assets/images/services/Shifting_5.PNG',
+        'assets/images/services/Shifting_1.png',
+        'assets/images/services/Shifting_2.png',
+        'assets/images/services/Shifting_3.png',
+        'assets/images/services/Shifting_4.png',
+        'assets/images/services/Shifting_5.png',
       ],
     },
 
@@ -420,16 +420,16 @@ class BookmarkController extends GetxController {
       'price': '30',
       'rating': '4.9',
       'reviews': 600,
-      'image': 'assets/images/house_cleaning.PNG',
+      'image': 'assets/images/house_cleaning.png',
       'description':
           'A professional haircut service that ensures you leave looking fabulous and feeling confident.',
       'category': 'Beauty',
       'gallery': [
-        'assets/images/services/Shifting_1.PNG',
-        'assets/images/services/Shifting_2.PNG',
-        'assets/images/services/Shifting_3.PNG',
-        'assets/images/services/Shifting_4.PNG',
-        'assets/images/services/Shifting_5.PNG',
+        'assets/images/services/Shifting_1.png',
+        'assets/images/services/Shifting_2.png',
+        'assets/images/services/Shifting_3.png',
+        'assets/images/services/Shifting_4.png',
+        'assets/images/services/Shifting_5.png',
       ],
     },
     {
@@ -438,16 +438,16 @@ class BookmarkController extends GetxController {
       'price': '25',
       'rating': '4.7',
       'reviews': 450,
-      'image': 'assets/images/house_cleaning.PNG',
+      'image': 'assets/images/house_cleaning.png',
       'description':
           'Our expert barbers provide a clean, sharp look with a variety of styles to suit your preferences.',
       'category': 'Beauty',
       'gallery': [
-        'assets/images/services/Shifting_1.PNG',
-        'assets/images/services/Shifting_2.PNG',
-        'assets/images/services/Shifting_3.PNG',
-        'assets/images/services/Shifting_4.PNG',
-        'assets/images/services/Shifting_5.PNG',
+        'assets/images/services/Shifting_1.png',
+        'assets/images/services/Shifting_2.png',
+        'assets/images/services/Shifting_3.png',
+        'assets/images/services/Shifting_4.png',
+        'assets/images/services/Shifting_5.png',
       ],
     },
 
@@ -463,11 +463,11 @@ class BookmarkController extends GetxController {
           'Fix your AC quickly with our professional repair services, ensuring a cool and comfortable environment.',
       'category': 'AC Repa.',
       'gallery': [
-        'assets/images/services/Shifting_1.PNG',
-        'assets/images/services/Shifting_2.PNG',
-        'assets/images/services/Shifting_3.PNG',
-        'assets/images/services/Shifting_4.PNG',
-        'assets/images/services/Shifting_5.PNG',
+        'assets/images/services/Shifting_1.png',
+        'assets/images/services/Shifting_2.png',
+        'assets/images/services/Shifting_3.png',
+        'assets/images/services/Shifting_4.png',
+        'assets/images/services/Shifting_5.png',
       ],
     },
 
@@ -483,11 +483,11 @@ class BookmarkController extends GetxController {
           'Our car wash service includes a thorough clean, both inside and outside, leaving your car sparkling and refreshed.',
       'category': 'Vehicle',
       'gallery': [
-        'assets/images/services/Shifting_1.PNG',
-        'assets/images/services/Shifting_2.PNG',
-        'assets/images/services/Shifting_3.PNG',
-        'assets/images/services/Shifting_4.PNG',
-        'assets/images/services/Shifting_5.PNG',
+        'assets/images/services/Shifting_1.png',
+        'assets/images/services/Shifting_2.png',
+        'assets/images/services/Shifting_3.png',
+        'assets/images/services/Shifting_4.png',
+        'assets/images/services/Shifting_5.png',
       ],
     },
 
@@ -503,11 +503,11 @@ class BookmarkController extends GetxController {
           'Our skilled technicians repair laptops of all brands to ensure they work like new.',
       'category': 'Electronics',
       'gallery': [
-        'assets/images/services/Shifting_1.PNG',
-        'assets/images/services/Shifting_2.PNG',
-        'assets/images/services/Shifting_3.PNG',
-        'assets/images/services/Shifting_4.PNG',
-        'assets/images/services/Shifting_5.PNG',
+        'assets/images/services/Shifting_1.png',
+        'assets/images/services/Shifting_2.png',
+        'assets/images/services/Shifting_3.png',
+        'assets/images/services/Shifting_4.png',
+        'assets/images/services/Shifting_5.png',
       ],
     },
 
@@ -523,11 +523,11 @@ class BookmarkController extends GetxController {
           'Relax and rejuvenate with our full-body massage services, tailored to relieve stress and muscle tension.',
       'category': 'Massage',
       'gallery': [
-        'assets/images/services/Shifting_1.PNG',
-        'assets/images/services/Shifting_2.PNG',
-        'assets/images/services/Shifting_3.PNG',
-        'assets/images/services/Shifting_4.PNG',
-        'assets/images/services/Shifting_5.PNG',
+        'assets/images/services/Shifting_1.png',
+        'assets/images/services/Shifting_2.png',
+        'assets/images/services/Shifting_3.png',
+        'assets/images/services/Shifting_4.png',
+        'assets/images/services/Shifting_5.png',
       ],
     },
 
@@ -538,16 +538,16 @@ class BookmarkController extends GetxController {
       'price': '20',
       'rating': '4.8',
       'reviews': 420,
-      'image': 'assets/images/house_cleaning.PNG',
+      'image': 'assets/images/house_cleaning.png',
       'description':
           'Precision haircuts for men, designed to give you the perfect look for any occasion.',
       'category': 'Men\'s Sal.',
       'gallery': [
-        'assets/images/services/Shifting_1.PNG',
-        'assets/images/services/Shifting_2.PNG',
-        'assets/images/services/Shifting_3.PNG',
-        'assets/images/services/Shifting_4.PNG',
-        'assets/images/services/Shifting_5.PNG',
+        'assets/images/services/Shifting_1.png',
+        'assets/images/services/Shifting_2.png',
+        'assets/images/services/Shifting_3.png',
+        'assets/images/services/Shifting_4.png',
+        'assets/images/services/Shifting_5.png',
       ],
     },
   ].obs;

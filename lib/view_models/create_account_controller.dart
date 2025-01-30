@@ -1,6 +1,7 @@
-import 'package:get/get.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 // CreateAccountController
 class CreateAccountController extends GetxController {
@@ -16,7 +17,8 @@ class CreateAccountController extends GetxController {
     rememberMe.value = value ?? false;
   }
 
-  Future<void> createAccount(String email, String password) async {
+  Future<void> createAccount(
+      String email, String password, String userName, String phone) async {
     isLoading.value = true;
     try {
       final credential =
@@ -24,6 +26,16 @@ class CreateAccountController extends GetxController {
         email: email,
         password: password,
       );
+
+      var db = FirebaseFirestore.instance;
+
+      await db.collection('users').doc(credential.user!.uid).set({
+        'email': email,
+        'uid': credential.user!.uid,
+        'fullName': userName,
+        'profilePicture': '',
+        'phone': phone,
+      });
 
       User? user = FirebaseAuth.instance.currentUser;
       if (user != null && !user.emailVerified) {
@@ -37,6 +49,13 @@ class CreateAccountController extends GetxController {
       Get.offNamed("/home");
     } on FirebaseAuthException catch (e) {
       _handleFirebaseAuthErrors(e);
+    } catch (e) {
+      Get.snackbar(
+        "Error",
+        "There is an error",
+        backgroundColor: Colors.red.withOpacity(0.5),
+        colorText: Colors.white,
+      );
     } finally {
       isLoading.value = false;
     }

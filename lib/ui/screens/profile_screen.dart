@@ -1,8 +1,9 @@
+import 'package:final_project/Route/app_route.dart';
+import 'package:final_project/ui/widget/custom_test_filed.dart';
 import 'package:final_project/view_models/FillProfileController.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:final_project/ui/widget/custom_test_filed.dart';
 
 class FillProfileScreen extends StatelessWidget {
   const FillProfileScreen({super.key});
@@ -21,21 +22,23 @@ class FillProfileScreen extends StatelessWidget {
     }
 
     return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          "Fill Your Profile",
+          style: TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+            color: Colors.black,
+          ),
+        ),
+        backgroundColor: Colors.white,
+        centerTitle: true,
+      ),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
             children: [
-              const Text(
-                "Fill Your Profile",
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
-                ),
-              ),
-              const SizedBox(height: 20),
-
               // الصورة الشخصية
               Obx(() {
                 return Stack(
@@ -136,6 +139,12 @@ class FillProfileScreen extends StatelessWidget {
                 icon: Icons.location_on_outlined,
                 keyboardType: TextInputType.streetAddress,
                 onChanged: controller.updateAddress,
+                suffixIcon: IconButton(
+                  icon: const Icon(Icons.location_on_outlined),
+                  onPressed: () {
+                    Get.toNamed(AppRoute.pickPlaceScreen);
+                  },
+                ),
               ),
               const SizedBox(height: 10),
 

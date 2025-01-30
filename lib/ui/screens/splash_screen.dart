@@ -31,7 +31,7 @@ class _SplashScreenState extends State<SplashScreen> {
           children: [
             // الشعار (يمكنك استبدال الصورة بالشعار الموجود في التصميم)
             Image.asset(
-              'assets/images/logo.PNG', // استبدليه بمسار اللوجو الصحيح
+              'assets/images/logo.png', // استبدليه بمسار اللوجو الصحيح
               height: 120,
             ),
             const SizedBox(height: 400),

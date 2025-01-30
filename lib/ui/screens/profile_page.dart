@@ -1,14 +1,15 @@
+import 'package:final_project/cor/constants.dart';
 import 'package:final_project/ui/screens/SecurityScreen.dart';
 import 'package:final_project/ui/screens/login_screen_ready.dart';
-import 'package:final_project/ui/screens/payment_method_page.dart';
 import 'package:final_project/ui/screens/profile_screen.dart';
+import 'package:final_project/view_models/payment_controller.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({super.key});
-
+  ProfileScreen({super.key});
+  final controller = Get.put(PaymentController());
   @override
   Widget build(BuildContext context) {
     RxBool isDarkMode = false.obs; // للتحكم في الوضع الداكن
@@ -29,18 +30,20 @@ class ProfileScreen extends StatelessWidget {
               CircleAvatar(
                 radius: 50,
                 backgroundColor: Colors.grey[200],
-                child: const Icon(
-                  Icons.person,
-                  size: 60,
-                  color: Colors.grey,
-                ),
+                child: profilePicture == ''
+                    ? const Icon(
+                        Icons.person,
+                        size: 60,
+                        color: Colors.grey,
+                      )
+                    : Image.network(profilePicture),
               ),
               const SizedBox(height: 20),
 
               // اسم المستخدم
-              const Text(
-                "User Name",
-                style: TextStyle(
+              Text(
+                userName,
+                style: const TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
@@ -49,9 +52,9 @@ class ProfileScreen extends StatelessWidget {
               const SizedBox(height: 5),
 
               // البريد الإلكتروني
-              const Text(
-                "user.email@example.com",
-                style: TextStyle(
+              Text(
+                email,
+                style: const TextStyle(
                   fontSize: 16,
                   color: Colors.grey,
                 ),
@@ -74,7 +77,7 @@ class ProfileScreen extends StatelessWidget {
                 title: const Text("Payment"),
                 trailing: const Icon(Icons.arrow_forward_ios, size: 16),
                 onTap: () {
-                  Get.to(() => PaymentMethodsPage());
+                  controller.makePayment();
                 },
               ),
               const Divider(),

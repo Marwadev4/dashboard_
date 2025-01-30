@@ -1,7 +1,9 @@
+import 'package:final_project/cor/constants.dart';
 import 'package:final_project/ui/widget/custom_test_filed.dart';
 import 'package:final_project/view_models/create_account_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class CreateAccountScreen extends StatelessWidget {
   final CreateAccountController controller = Get.put(CreateAccountController());
@@ -82,6 +84,7 @@ class CreateAccountScreen extends StatelessWidget {
                   controller: emailController,
                   hintText: "Email",
                   icon: Icons.email_outlined,
+                  keyboardType: TextInputType.emailAddress,
                   suffixIcon: IconButton(
                     icon: const Icon(Icons.check),
                     onPressed: () {
@@ -101,6 +104,7 @@ class CreateAccountScreen extends StatelessWidget {
                       hintText: "Password",
                       icon: Icons.lock_outline,
                       obscureText: !controller.isPasswordVisible.value,
+                      keyboardType: TextInputType.visiblePassword,
                       suffixIcon: IconButton(
                         icon: Icon(controller.isPasswordVisible.value
                             ? Icons.visibility_outlined
@@ -134,10 +138,24 @@ class CreateAccountScreen extends StatelessWidget {
                           ? null
                           : () async {
                               if (!formState.currentState!.validate()) return;
+
                               await controller.createAccount(
                                 emailController.text.trim(),
                                 passwordController.text.trim(),
+                                userNameController.text.trim(),
+                                phoneController.text.trim(),
                               );
+                              var prefs = await SharedPreferences.getInstance();
+                              userName = userNameController.text;
+                              await prefs.setString(
+                                  'fullName', userNameController.text);
+
+                              isLoggedin = true;
+                              await prefs.setBool('isLoggedin', true);
+
+                              email = emailController.text;
+                              await prefs.setString(
+                                  'email', emailController.text);
                             },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xFF7210FF),

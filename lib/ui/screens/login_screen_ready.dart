@@ -1,8 +1,12 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:final_project/cor/constants.dart';
 import 'package:final_project/ui/screens/forgot_password_screen.dart';
 import 'package:final_project/ui/screens/home_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
 import '../../view_models/login_controller.dart';
 import 'create_account_screen.dart';
 
@@ -126,6 +130,26 @@ class LoginScreenReady extends StatelessWidget {
                         email: controller.emaillogin.value.trim(),
                         password: controller.passwordlogin.value.trim(),
                       );
+
+                      var db = FirebaseFirestore.instance;
+                      var userInfo = await db
+                          .collection('users')
+                          .doc(credential.user!.uid)
+                          .get();
+
+                      var prefs = await SharedPreferences.getInstance();
+                      userName = userInfo['fullName'];
+                      await prefs.setString('fullName', userInfo['fullName']);
+
+                      profilePicture = userInfo['profilePicture'];
+                      await prefs.setString('profilePicture', userInfo['profilePicture']);
+
+                      isLoggedin = true;
+                      await prefs.setBool('isLoggedin', true);
+
+                      email = controller.emaillogin.value;
+                      await prefs.setString(
+                          'email', controller.emaillogin.value);
                       Get.off(() => HomePage());
                     } on FirebaseAuthException catch (e) {
                       if (e.code == 'user-not-found') {
@@ -143,6 +167,13 @@ class LoginScreenReady extends StatelessWidget {
                           colorText: Colors.white,
                         );
                       }
+                    } catch (e) {
+                      Get.snackbar(
+                        "Error",
+                        "There is an error",
+                        backgroundColor: Colors.red.withOpacity(0.5),
+                        colorText: Colors.white,
+                      );
                     }
                   },
                   style: ElevatedButton.styleFrom(

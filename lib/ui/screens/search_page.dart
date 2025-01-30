@@ -32,7 +32,7 @@ class SearchScreen extends StatelessWidget {
                 ),
               ),
               onChanged: (query) {
-                searchControllerInstance.filteredServices();
+                searchControllerInstance.filterServices(query);
               },
             ),
           ),

@@ -14,8 +14,8 @@ class HomePage extends StatelessWidget {
   final List<Widget> _screens = [
     HomeScreen(),
     MyBookmarkScreen(),
-    const InboxScreen(),
-    const ProfileScreen(),
+    InboxScreen(),
+    ProfileScreen(),
   ];
 
   @override

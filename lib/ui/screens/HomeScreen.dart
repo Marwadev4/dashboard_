@@ -1,4 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:final_project/cor/constants.dart';
 import 'package:final_project/ui/widget/build_services.dart';
 import 'package:final_project/ui/widget/container.dart';
 import 'package:final_project/ui/widget/service_item.dart';
@@ -38,11 +39,11 @@ class HomeScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text(
-                    'Good Morning 👋\nAndrew Ainsley',
-                    style: TextStyle(color: Colors.black, fontSize: 18),
+                  Text(
+                    'Good Morning 👋\n$userName',
+                    style: const TextStyle(color: Colors.black, fontSize: 18),
                   ),
-                  const SizedBox(width: 100),
+                  const Spacer(),
                   IconButton(
                     icon: const Icon(Icons.notifications_none,
                         color: Colors.black),

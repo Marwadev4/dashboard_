@@ -36,7 +36,7 @@ class CreateNewPasswordScreen extends StatelessWidget {
               // Illustration
               Center(
                 child: Image.asset(
-                  'assets/images/passwordreset.PNG',
+                  'assets/images/passwordreset.png',
                   height: 200,
                 ),
               ),

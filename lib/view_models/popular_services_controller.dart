@@ -9,7 +9,7 @@ class PopularServicesController extends GetxController {
       "price": 25,
       "rating": 4.8,
       "reviews": 8289,
-      "image": "assets/images/image_home1.PNG",
+      "image": "assets/images/image_home1.png",
     },
     {
       "id": 2,
@@ -17,7 +17,7 @@ class PopularServicesController extends GetxController {
       "price": 20,
       "rating": 4.5,
       "reviews": 6453,
-      "image": "assets/images/image_home2.PNG",
+      "image": "assets/images/image_home2.png",
     },
     {
       "id": 3,
@@ -25,7 +25,7 @@ class PopularServicesController extends GetxController {
       "price": 22,
       "rating": 4.7,
       "reviews": 7038,
-      "image": "assets/images/image_home3.PNG",
+      "image": "assets/images/image_home3.png",
     },
     {
       "id": 4,
@@ -33,7 +33,7 @@ class PopularServicesController extends GetxController {
       "price": 24,
       "rating": 4.6,
       "reviews": 5921,
-      "image": "assets/images/image_home4.PNG",
+      "image": "assets/images/image_home4.png",
     },
   ].obs;
 

@@ -5,12 +5,13 @@ import 'package:final_project/view_models/bookmarke_controller.dart';
 import 'package:final_project/view_models/search_controller.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
 import 'firebase_options.dart';
 
 void main() async {
@@ -32,8 +33,8 @@ void main() async {
   runApp(const MyApp());
 }
 
-Future<void> _setup() async{
-Stripe.publishableKey = stripePublishableKey;
+Future<void> _setup() async {
+  Stripe.publishableKey = stripePublishableKey;
 }
 
 class MyApp extends StatefulWidget {
@@ -50,10 +51,27 @@ class _MyAppState extends State<MyApp> {
       if (user == null) {
         print('==User is currently signed out!==');
       } else {
-        print('===User is signed in!===');
+        print('=== User is signed in! ===');
       }
     });
+    requestNotificationPermission();
     super.initState();
+  }
+
+  Future<void> requestNotificationPermission() async {
+    FirebaseMessaging messaging = FirebaseMessaging.instance;
+
+    NotificationSettings settings = await messaging.requestPermission(
+      alert: true,
+      badge: true,
+      sound: true,
+    );
+
+    if (settings.authorizationStatus == AuthorizationStatus.authorized) {
+      print('✅ تم السماح بالإشعارات');
+    } else {
+      print('❌ تم رفض الإشعارات');
+    }
   }
 
   @override

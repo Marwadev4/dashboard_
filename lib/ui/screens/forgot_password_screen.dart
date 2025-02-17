@@ -38,17 +38,15 @@ class ForgotPasswordScreen extends StatelessWidget {
                 ],
               ),
 
-              // Illustration
               Center(
                 child: Image.asset(
-                  'assets/images/pass.png',
+                  'assets/images/pass.jpeg',
                   width: 250,
                   height: 200,
                 ),
               ),
               const SizedBox(height: 20),
 
-              // Description Text
               const Text(
                 "Select which contact details should we use to reset your password",
                 textAlign: TextAlign.center,
@@ -59,7 +57,6 @@ class ForgotPasswordScreen extends StatelessWidget {
               ),
               const SizedBox(height: 40),
 
-              // SMS Option
               GestureDetector(
                 onTap: () => controller.updateSelectedOption("sms"),
                 child: Obx(
@@ -86,7 +83,6 @@ class ForgotPasswordScreen extends StatelessWidget {
               ),
               const SizedBox(height: 25),
 
-              // Email Option
               GestureDetector(
                 onTap: () => controller.updateSelectedOption("email"),
                 child: Obx(
@@ -113,7 +109,6 @@ class ForgotPasswordScreen extends StatelessWidget {
               ),
               const SizedBox(height: 40),
 
-              // Continue Button
               Center(
                 child: SignInButton(
                   text: "Continue",

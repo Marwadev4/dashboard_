@@ -57,7 +57,6 @@ class CreateAccountScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 20),
 
-                // Full Name Field
                 CustomTextField(
                   controller: userNameController,
                   hintText: "Full Name",
@@ -67,7 +66,6 @@ class CreateAccountScreen extends StatelessWidget {
 
                 const SizedBox(height: 20),
 
-                // Phone Number Field
                 CustomTextField(
                   controller: phoneController,
                   hintText: "Phone Number",
@@ -79,7 +77,6 @@ class CreateAccountScreen extends StatelessWidget {
 
                 const SizedBox(height: 20),
 
-                // Email Field
                 CustomTextField(
                   controller: emailController,
                   hintText: "Email",
@@ -98,7 +95,6 @@ class CreateAccountScreen extends StatelessWidget {
 
                 const SizedBox(height: 20),
 
-                // Password Field
                 Obx(() => CustomTextField(
                       controller: passwordController,
                       hintText: "Password",
@@ -117,7 +113,6 @@ class CreateAccountScreen extends StatelessWidget {
 
                 const SizedBox(height: 20),
 
-                // Remember Me Checkbox
                 Obx(() => Row(
                       children: [
                         Checkbox(
@@ -132,7 +127,6 @@ class CreateAccountScreen extends StatelessWidget {
 
                 const SizedBox(height: 20),
 
-                // Sign Up Button
                 Obx(() => ElevatedButton(
                       onPressed: controller.isLoading.value
                           ? null
@@ -177,7 +171,6 @@ class CreateAccountScreen extends StatelessWidget {
 
                 const SizedBox(height: 20),
 
-                // Already Have an Account
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

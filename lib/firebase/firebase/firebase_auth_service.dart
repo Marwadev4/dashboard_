@@ -5,7 +5,6 @@ class FirebaseAuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
-  // تسجيل مستخدم جديد
   Future<String?> signUpWithEmailAndPassword({
     required String name,
     required String email,
@@ -34,7 +33,6 @@ class FirebaseAuthService {
     }
   }
 
-  // تسجيل الدخول
   Future<User?> signInWithEmailAndPassword({
     required String email,
     required String password,
@@ -50,7 +48,6 @@ class FirebaseAuthService {
     }
   }
 
-  // تسجيل الخروج
   Future<void> signOut() async {
     await _auth.signOut();
   }

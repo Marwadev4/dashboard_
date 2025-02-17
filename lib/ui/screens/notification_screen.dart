@@ -29,7 +29,6 @@ class NotificationScreen extends StatelessWidget {
     );
   }
 
-  // بناء قسم التاريخ مع الإشعارات
   Widget _buildNotificationSection(String date, List<dynamic> items) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -70,7 +69,6 @@ class NotificationScreen extends StatelessWidget {
       ),
       child: Row(
         children: [
-          // الدائرة الملونة مع الأيقونة
           Container(
             width: 50,
             height: 50,

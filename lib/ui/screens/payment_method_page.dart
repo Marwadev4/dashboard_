@@ -12,7 +12,7 @@ class PaymentMethodsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Payment Methods'),
+        title: const Text(' Payment Methods '),
         centerTitle: true,
       ),
       body: Padding(
@@ -21,8 +21,12 @@ class PaymentMethodsPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
+
               'Select the payment method you want to use',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+
+
+              
             ),
             const SizedBox(height: 16),
             Obx(() => Column(

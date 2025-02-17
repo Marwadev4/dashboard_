@@ -63,7 +63,6 @@ class HomeScreen extends StatelessWidget {
 
               const SizedBox(height: 26),
 
-              // Search Bar
               Container(
                 margin: const EdgeInsets.symmetric(vertical: 10),
                 decoration: BoxDecoration(
@@ -83,7 +82,6 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
 
-              //   const SizedBox(height: 26),
               const SizedBox(height: 10),
               CarouselSlider(
                 options: CarouselOptions(
@@ -114,7 +112,6 @@ class HomeScreen extends StatelessWidget {
 
               const SizedBox(height: 22),
 
-              // Special Offers Carousel
 
               const SizedBox(height: 26),
               Row(
@@ -151,7 +148,6 @@ class HomeScreen extends StatelessWidget {
                 },
               ),
 
-              // Most Popular Services Section
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -174,7 +170,7 @@ class HomeScreen extends StatelessWidget {
                     children: bookmarkController.services.map((service) {
                       if (service['name'] == null || service['price'] == null) {
                         debugPrint('Invalid service data: $service');
-                        return const SizedBox(); // أو عرض رسالة خطأ
+                        return const SizedBox(); 
                       }
                       return ServiceItem(
                         title: service['name'].toString(),

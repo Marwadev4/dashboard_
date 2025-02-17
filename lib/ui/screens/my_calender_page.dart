@@ -5,19 +5,18 @@ class MyCalendarPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // مثال على بيانات الحجوزات
     final List<Map<String, dynamic>> bookings = [
       {
         'title': 'House Cleaning',
         'client': 'Jenny Wilson',
         'status': 'Upcoming',
-        'image': 'assets/cleaning.png', // مسار الصورة
+        'image': 'assets/cleaning.jpeg', 
       },
       {
         'title': 'Appliance Service',
         'client': 'Alex Nguyen',
         'status': 'Upcoming',
-        'image': 'assets/appliance.png', // مسار الصورة
+        'image': 'assets/appliance.jpeg', 
       },
     ];
 
@@ -32,7 +31,6 @@ class MyCalendarPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // التقويم
             Card(
               elevation: 4,
               shape: RoundedRectangleBorder(
@@ -70,14 +68,14 @@ class MyCalendarPage extends StatelessWidget {
                         mainAxisSpacing: 4,
                         crossAxisSpacing: 4,
                       ),
-                      itemCount: 31, // أيام الشهر
+                      itemCount: 31, 
                       itemBuilder: (context, index) {
                         final day = index + 1;
                         return Container(
                           decoration: BoxDecoration(
                             color: day == 23
                                 ? Colors.purple
-                                : Colors.grey[200], // اليوم المحدد
+                                : Colors.grey[200], 
                             borderRadius: BorderRadius.circular(8),
                           ),
                           alignment: Alignment.center,
@@ -97,7 +95,6 @@ class MyCalendarPage extends StatelessWidget {
 
             const SizedBox(height: 16),
 
-            // قسم الحجوزات
             Expanded(
               child: bookings.isEmpty
                   ? const Column(

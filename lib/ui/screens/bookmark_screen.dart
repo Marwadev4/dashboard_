@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 
 class MyBookmarkScreen extends StatelessWidget {
   final BookmarkController bookmarkController =
-      Get.find<BookmarkController>(); // استخدم النسخة الموجودة
+      Get.find<BookmarkController>();
 
   MyBookmarkScreen({super.key});
 

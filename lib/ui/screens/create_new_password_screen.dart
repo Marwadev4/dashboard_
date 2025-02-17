@@ -33,7 +33,6 @@ class CreateNewPasswordScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Illustration
               Center(
                 child: Image.asset(
                   'assets/images/passwordreset.png',
@@ -42,7 +41,6 @@ class CreateNewPasswordScreen extends StatelessWidget {
               ),
               const SizedBox(height: 20),
 
-              // New Password Field
               const Text("Create Your New Password"),
               const SizedBox(height: 10),
               Obx(
@@ -90,7 +88,6 @@ class CreateNewPasswordScreen extends StatelessWidget {
               ),
               const SizedBox(height: 20),
 
-              // Remember Me Checkbox
               Obx(
                 () => Row(
                   children: [
@@ -106,7 +103,6 @@ class CreateNewPasswordScreen extends StatelessWidget {
 
               const SizedBox(height: 30),
 
-              // Continue Button
               ElevatedButton(
                 onPressed: () {
                   if (newPasswordController.text.isEmpty ||

@@ -10,12 +10,12 @@ class Constants {
 
   static ButtonStyle elevatedButton() {
     return ElevatedButton.styleFrom(
-      backgroundColor: Colors.purple, // لون الزر
+      backgroundColor: Colors.purple, 
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(30), // حواف مستديرة
+        borderRadius: BorderRadius.circular(30), 
       ),
-      minimumSize: const Size(double.infinity, 60), // عرض كامل وارتفاع ثابت
-      padding: const EdgeInsets.symmetric(vertical: 15), // مسافة داخلية
+      minimumSize: const Size(double.infinity, 60), 
+      padding: const EdgeInsets.symmetric(vertical: 15), 
     );
   }
 }

@@ -32,7 +32,7 @@ class AllServicesScreen extends StatelessWidget {
         child: GridView.builder(
           itemCount: controller.services.length,
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 4, // عدد الأعمدة
+            crossAxisCount: 4,
             crossAxisSpacing: 8,
             mainAxisSpacing: 8,
           ),
@@ -41,7 +41,7 @@ class AllServicesScreen extends StatelessWidget {
             return GestureDetector(
               onTap: () {
                 var service = controller
-                    .services[index]; // تأكد من أنك تحصل على بيانات الخدمة
+                    .services[index]; 
                 if (service['name'] == 'Cleaning') {
                   Get.to(() => CleaningPage(
                       serviceName: service['name'], serviceData: service));

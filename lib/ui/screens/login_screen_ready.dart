@@ -3,6 +3,7 @@ import 'package:final_project/cor/constants.dart';
 import 'package:final_project/ui/screens/forgot_password_screen.dart';
 import 'package:final_project/ui/screens/home_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -142,7 +143,8 @@ class LoginScreenReady extends StatelessWidget {
                       await prefs.setString('fullName', userInfo['fullName']);
 
                       profilePicture = userInfo['profilePicture'];
-                      await prefs.setString('profilePicture', userInfo['profilePicture']);
+                      await prefs.setString(
+                          'profilePicture', userInfo['profilePicture']);
 
                       isLoggedin = true;
                       await prefs.setBool('isLoggedin', true);
@@ -150,6 +152,7 @@ class LoginScreenReady extends StatelessWidget {
                       email = controller.emaillogin.value;
                       await prefs.setString(
                           'email', controller.emaillogin.value);
+                      updateFcmToken();
                       Get.off(() => HomePage());
                     } on FirebaseAuthException catch (e) {
                       if (e.code == 'user-not-found') {
@@ -236,6 +239,24 @@ class LoginScreenReady extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+Future<void> updateFcmToken() async {
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+  final FirebaseFirestore _firestore = FirebaseFirestore.instance;
+  final FirebaseMessaging _messaging = FirebaseMessaging.instance;
+
+  // جلب المستخدم الحالي
+  User? user = _auth.currentUser;
+  if (user == null) return;
+
+  // جلب رمز FCM
+  String? fcmToken = await _messaging.getToken();
+  if (fcmToken != null) {
+    await _firestore.collection('users').doc(user.uid).update({
+      'fcmToken': fcmToken,
+    });
   }
 }
 
